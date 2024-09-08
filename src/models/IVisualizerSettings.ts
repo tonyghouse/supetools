@@ -1,5 +1,0 @@
-
-
-interface IVisualizerSettings {
-    direction: CanvasDirection;
-}

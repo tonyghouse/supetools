@@ -1,1 +1,1 @@
-#supetools UI
+# UI base template
