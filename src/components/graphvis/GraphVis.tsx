@@ -66,7 +66,7 @@ const GraphVis = ({
     );
     setNewNodes([...newUpdatedNodes]);
     setNewEdges([...newUpdatedEdges]);
-  }, [codeText, visualizerSettings]);
+  }, [codeText,dataTypeContext.dataType, visualizerSettings]);
 
   useResizeObserver(containerRef, (resizeObserver) => {
     const containerWidth = resizeObserver?.contentRect?.width;

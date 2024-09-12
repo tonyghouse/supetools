@@ -12,11 +12,13 @@ const ThemeContextDefaultProvider = (props: any) => {
   useEffect(() => {
     let userColorScheme: ThemeMode = "light";
 
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
+    if (typeof window !== 'undefined') {
+      window.matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", (event) => {
         userColorScheme = event.matches ? "dark" : "light";
       });
+    }
+    
 
      const themeValue= localStorage.getItem('supetoolsThemeValue');
      const colorScheme: ThemeMode = (themeValue === "dark" || themeValue === "light") 

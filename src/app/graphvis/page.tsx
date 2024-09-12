@@ -1,18 +1,13 @@
 "use client"
-import { useContext, useEffect, useState } from "react";
-
-import { IThemeContextType, ThemeContext } from "@/context/ThemeContext";
+import { useState } from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ErrorPage from "@/components/ErrorPage";
-import GraphVis from "@/components/graphvis/GraphVis";
+// import GraphVis from "@/components/graphvis/GraphVis";
 import GraphyPowerBar from "@/components/graphvis/GraphyPowerBar";
 
 
 function GraphPage() {
   const rotationValues: string[] = ["DOWN", "RIGHT", "UP", "LEFT"];
-
-
-  const themeContext = useContext<IThemeContextType>(ThemeContext);
   
   const [visualizerRef, setVisualizerRef] = useState<any | null>(null);
   const [dataEditorRef, setDataEditorRef] = useState<any | null>(null);
@@ -83,13 +78,13 @@ function GraphPage() {
             changeExpand={changeExpand}
             changeRotation={changeRotation}
           />
-          <GraphVis
+          {/* <GraphVis
             codeText={codeText}
             setCodeText={setCodeText}
             getVisualizerRef={getVisualizerRef}
             captureDataEditorRef={captureDataEditorRef}
             visualizerSettings={visualizerSettings}
-          />
+          /> */}
         </div>
       </ErrorBoundary>
     </>

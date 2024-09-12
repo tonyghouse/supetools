@@ -1,7 +1,6 @@
 "use client";
-import LaunchSoon from "@/components/LaunchSoon";
 import React, { useContext, useRef, useState } from "react";
-import { Textarea } from "@/components/ui/textarea";
+
 import { toast } from "sonner"
 import {
   ResizableHandle,
@@ -33,16 +32,17 @@ function TableVisPage() {
   };
 
 
-loader.init().then((monaco) => {
-  monaco.editor.defineTheme('custom-vs-dark', {
-      base: 'vs-dark',
-      inherit: true,
-      rules: [],
-      colors: {
-          'editor.background': '#0A0A0A',
-      },
-  });
-});
+  //TODO
+// loader.init().then((monaco) => {
+//   monaco.editor.defineTheme('custom-vs-dark', {
+//       base: 'vs-dark',
+//       inherit: true,
+//       rules: [],
+//       colors: {
+//           'editor.background': '#0A0A0A',
+//       },
+//   });
+// });
 
   function handleEditorChange(value: string): void {
     setJsonData(value);
